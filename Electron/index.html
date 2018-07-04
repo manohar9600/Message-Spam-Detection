@@ -4,18 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <title>SMS Spam detection</title>
-    <style></style>
-    <script src="Src/Scripts/Js/spam.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="Src/Js/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Src/Css/bootstrap/bootstrap.min.css">
+    <script src="Src/Js/bootstrap/bootstrap.min.js"></script>
+    <script src="Src/Js/spam.js"></script>
+    <link rel="stylesheet" type="text/css" href="Src/Css/style.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <div>
-        <textarea rows="18" cols="50" name="sms" id="sms"></textarea>
-        <button onclick="detect_spam()">Check</button>
+    <div class="row">
+        <div class="col main_layout">
+            <div class="row">
+                <h3 class="dispay-1  heading">
+                    Message Spam detection
+                </h3>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <textarea class="form-control  input_area" rows="5" id="msg">
+                    </textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button onclick="detect_spam()"class="btn btn-primary btn_1" >
+                    Check Message</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row output_area">
+                <p id="output_spam"></p>
+                <p id="nspam"></p>
+            </div>
+        </div>
     </div>
-    <p id="output"></p>
 </body>
 
 </html>

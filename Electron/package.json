@@ -19,6 +19,7 @@
   "author": "Manohar",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.5.2"
+    "amqplib": "^0.5.2",
+    "electron": "^2.0.4"
   }
 }

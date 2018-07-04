@@ -5,14 +5,16 @@ var amqp = require('amqplib/callback_api')
 var msg
 
 function detect_spam() {
-    msg = document.getElementById('sms').value
+    msg = document.getElementById('msg').value
     //msg = 'Hello Manu'
     send_msg(msg)
-    console.log("End")
 }
 
 function write_html(res){
-    document.getElementById('output').innerHTML = res
+    var nspm = 100 - parseInt(res)
+    document.getElementById("nspam").innerHTML = "non_spam - " + res + "%"
+    document.getElementById("output_spam").innerHTML = "spam - " + 
+                                                        nspm.toString() + "%"
     return
 }
 

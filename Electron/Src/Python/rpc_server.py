@@ -61,7 +61,7 @@ channel.queue_declare(queue='rpc_queue')
 def on_request(ch, method, props, body):
 
     msg = body.decode("utf-8") 
-    print("spam " + msg)
+    print(msg)
     response = detect_spam(msg)
 
     ch.basic_publish(exchange='',
