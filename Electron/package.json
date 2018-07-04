@@ -1,0 +1,24 @@
+{
+  "name": "sms_spam_detection",
+  "version": "1.0.0",
+  "description": "Detecting a message as spam or not by content of message rather than phone number.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "sms",
+    "spam",
+    "detection",
+    "spam",
+    "rnn",
+    "lstm",
+    "deep",
+    "learning"
+  ],
+  "author": "Manohar",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
+}

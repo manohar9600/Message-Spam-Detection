@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+Electron/node_modules/
+Electron/Src/Test/
+src/Scripts/.vscode/
