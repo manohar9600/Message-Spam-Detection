@@ -9,6 +9,8 @@ Created an app for detecting spam message using sequence modelling in deep learn
 * By using word embeddings and LSTM we obtained 98.2% accuracy.
 * Python is used for training above model. Created sample electron app using HTML, CSS and NodeJs.
 
+dependencies - RabbitMQ 
+
 
 
 commands for project:  ( in project folder)
