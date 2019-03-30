@@ -100,7 +100,7 @@ with tf.Session() as sess:
         acc = sess.run(accuracy, feed_dict={inp: X_train, out: Y_train})
         print("epoch: "+str(i)+" loss : "+str(loss)+" accuracy :"+str(acc))
     
-    print("Saving.....") # saving the model
+    print("Saving.....")  # saving the model
     inp_dict = {
         "train_inputs": inp,
         "train_outputs": out

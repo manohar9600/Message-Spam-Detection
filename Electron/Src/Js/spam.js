@@ -12,9 +12,7 @@ function detect_spam() {
 
 function write_html(res){
     var nspm = 100 - parseInt(res)
-    document.getElementById("nspam").innerHTML = "non_spam - " + res + "%"
-    document.getElementById("output_spam").innerHTML = "spam - " + 
-                                                        nspm.toString() + "%"
+    document.getElementById("nspam").innerHTML = res;
     return
 }
 
