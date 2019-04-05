@@ -67,7 +67,10 @@ def predict(gene_name, gene_variation, lab_observation):
     input_comb = transform_toNum(gene_name, gene_variation, lab_observation)
     probability_pred = model.predict_proba(input_comb)
     print(probability_pred)
-    return probability_pred
+    final_string = ""
+    for i,val in enumerate(probability_pred[0]):
+        final_string = final_string + "class " + str(i+1) + ": " + str(val) + "<br />"
+    return final_string
 
 
 # server code
@@ -91,7 +94,7 @@ def on_request(ch, method, props, body):
 
 
 channel.basic_qos(prefetch_count=1)
-channel.basic_consume(on_request, queue='rpc_queue')
+channel.basic_consume(on_message_callback=on_request, queue='rpc_queue')
 print(" [x] Awaiting RPC requests")
 channel.start_consuming()
 
